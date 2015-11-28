@@ -120,8 +120,9 @@ class Router
         $controller = $segments[0];
         $method = $segments[1];
 
+        View::$controller = end(explode('\\', $controller));
+        View::$action = $method;
         $controller = new $controller($msg);
-
         call_user_func_array(array($controller, $method), $matched ? $matched : array());
     }
 
@@ -162,6 +163,8 @@ class Router
         if (method_exists($c, $method)) {
 			call_user_func_array(array($c,$method),$args);
             //found method so stop
+            View::$controller = $controller;
+            View::$action = $method;
             return true;
         }
 

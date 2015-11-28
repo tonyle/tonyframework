@@ -11,6 +11,7 @@ namespace Controllers;
 
 use Core\View;
 use Core\Controller;
+use Models\Category;
 
 /**
  * Sample controller showing a construct and 2 methods and their typical usage.
@@ -25,6 +26,7 @@ class Welcome extends Controller
     {
         parent::__construct();
         $this->language->load('Welcome');
+        $this->Category = new Category();
     }
 
     /**
@@ -34,22 +36,18 @@ class Welcome extends Controller
     {
         $data['title'] = $this->language->get('welcome_text');
         $data['welcome_message'] = $this->language->get('welcome_message');
-
-        View::renderTemplate('header', $data);
-        View::render('welcome/welcome', $data);
-        View::renderTemplate('footer', $data);
+        $data['data'] = $this->Category->select();
+        View::setData($data);
     }
 
     /**
      * Define Subpage page title and load template files
      */
-    public function subPage()
+    public function subPage($param, $id)
     {
         $data['title'] = $this->language->get('subpage_text');
-        $data['welcome_message'] = $this->language->get('subpage_message');
+        $data['welcome_message'] = $this->language->get('subpage_message')." id: ".$id;
 
-        View::renderTemplate('header', $data);
-        View::render('welcome/subpage', $data);
-        View::renderTemplate('footer', $data);
+        View::setData($data);
     }
 }

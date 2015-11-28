@@ -13,7 +13,10 @@ use Helpers\Hooks;
 
 /** Define routes. */
 Router::any('', 'Controllers\Welcome@index');
-Router::any('subpage', 'Controllers\Welcome@subPage');
+Router::any('subpage/(:all)-(:num).html', 'Controllers\Welcome@subPage');
+
+Router::any('admin', 'Modules\Admin\Controllers\Auth@index');
+Router::any('admin/index', 'Modules\Admin\Controllers\Auth@index');
 
 /** Module routes. */
 $hooks = Hooks::get();

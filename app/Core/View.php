@@ -20,6 +20,21 @@ class View
     private static $headers = array();
 
     /**
+     * @var string layout name
+     */
+    public static $layout = null;
+
+    /**
+     * @var string current controller
+     */
+    public static $controller;
+
+    /**
+     * @var string current action
+     */
+    public static $action;
+
+    /**
      * Include template file.
      *
      * @param  string $path  path to file from views folder
@@ -43,8 +58,25 @@ class View
     public static function renderModule($path, $data = false, $error = false)
     {
         self::sendHeaders();
+        require TONY."app/Modules/Admin/views/$path.php";
+    }
 
-        require TONY."app/Modules/$path.php";
+    /**
+     * Return absolute layout.
+     *
+     * @param  array   $data  array of data
+     * @param  string  $custom path to template folder
+     */
+    public static function setData($data = false, $custom = TEMPLATE)
+    {
+        self::sendHeaders();
+
+        $path = LAYOUT;
+
+        if (self::$layout != null) {
+            $path = self::$layout;
+        }
+        require TONY."app/templates/$custom/$path.php";
     }
 
     /**
@@ -57,7 +89,6 @@ class View
     public static function renderTemplate($path, $data = false, $custom = TEMPLATE)
     {
         self::sendHeaders();
-
         require TONY."app/templates/$custom/$path.php";
     }
 

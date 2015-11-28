@@ -41,5 +41,6 @@ abstract class Controller
 
         /** initialise the language object */
         $this->language = new Language();
+        $this->language->setLanguage('vi');
     }
 }

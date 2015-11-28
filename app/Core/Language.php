@@ -25,6 +25,26 @@ class Language
     private $array;
 
     /**
+     * Variable string with language code.
+     *
+     * @var string
+     */
+    private static $languageCode = null;
+
+    /**
+     *
+     * Set language
+     *
+     * @param string $languageCode
+     */
+    public function setLanguage($languageCode)
+    {
+        if (in_array($languageCode, ['cs', 'de', 'en', 'fr', 'it', 'nl', 'pl', 'ro', 'ru', 'vi'])) {
+            Language::$languageCode = $languageCode;
+        }
+    }
+
+    /**
      * Load language function.
      *
      * @param string $name
@@ -32,6 +52,10 @@ class Language
      */
     public function load($name, $code = LANGUAGE_CODE)
     {
+        if (Language::$languageCode != null) {
+            $code = Language::$languageCode;
+        }
+
         /** lang file */
         $file = TONY."app/language/$code/$name.php";
 
@@ -73,6 +97,10 @@ class Language
      */
     public static function show($value, $name, $code = LANGUAGE_CODE)
     {
+        if (Language::$languageCode != null) {
+            $code = Language::$languageCode;
+        }
+
         /** lang file */
         $file = TONY."app/language/$code/$name.php";
 

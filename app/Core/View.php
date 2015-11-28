@@ -30,7 +30,7 @@ class View
     {
         self::sendHeaders();
 
-        require SMVC."app/views/$path.php";
+        require TONY."app/views/$path.php";
     }
 
     /**
@@ -44,7 +44,7 @@ class View
     {
         self::sendHeaders();
 
-        require SMVC."app/Modules/$path.php";
+        require TONY."app/Modules/$path.php";
     }
 
     /**
@@ -58,7 +58,7 @@ class View
     {
         self::sendHeaders();
 
-        require SMVC."app/templates/$custom/$path.php";
+        require TONY."app/templates/$custom/$path.php";
     }
 
     /**

@@ -76,19 +76,19 @@ class Config
         define('DB_PASS', 'password');
 
         /**
-         * PREFER to be used in database calls default is smvc_
+         * PREFER to be used in database calls default is app_
          */
-        define('PREFIX', 'smvc_');
+        define('PREFIX', 'app_');
 
         /**
          * Set prefix for sessions.
          */
-        define('SESSION_PREFIX', 'smvc_');
+        define('SESSION_PREFIX', 'app_');
 
         /**
          * Optional create a constant for the name of the site.
          */
-        define('SITETITLE', 'V2.2');
+        define('SITETITLE', 'V1.0');
 
         /**
          * Optionall set a site email address.

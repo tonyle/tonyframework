@@ -1,4 +1,4 @@
-#V2.2
+#V1.0
 #What is Tony Framework?
 
 Tony Framework is a PHP 5.5 MVC system. It's designed to be lightweight and modular, allowing developers to build better and easy to maintain code with PHP.

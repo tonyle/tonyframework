@@ -3,11 +3,9 @@
  * Config - an example for setting up system settings.
  * When you are done editing, rename this file to 'Config.php'.
  *
- * @author David Carr - dave@daveismyname.com
- * @author Edwin Hoksberg - info@edwinhoksberg.nl
- * @version 2.2
- * @date June 27, 2014
- * @date updated Sept 19, 2015
+ * @author Tony Le - tonyle.microsoft@gmail.com
+ * @version 1.0
+ * @date November 28, 2015
  */
 
 namespace Core;

@@ -2,9 +2,9 @@
 /**
  * Tags Class
  *
- * @author David Carr - dave@daveismyname.com
- * @version 2.2
- * @date Sept 19, 2015
+ * @author Tony Le - tonyle.microsoft@gmail.com
+ * @version 1.0
+ * @date November 28, 2015
  */
 
 namespace Helpers;

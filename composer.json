@@ -2,7 +2,7 @@
     "name": "Tony Framework",
     "type": "project",
     "description": "Tony Framework for PHP 5.5+",
-    "homepage": "https://github.com/tonyle/framework",
+    "homepage": "https://github.com/tonyle/tonyframework",
     "license": "MIT",
     "authors": [
         {

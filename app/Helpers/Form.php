@@ -2,10 +2,9 @@
 /**
  * Form Helper
  *
- * @author David Carr - dave@daveismyname.com
+ * @author Tony Le - tonyle.microsoft@gmail.com
  * @version 1.0
- * @date June 27, 2014
- * @date updated Sept 19, 2015
+ * @date November 28, 2015
  */
 
 namespace Helpers;

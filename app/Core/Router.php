@@ -2,10 +2,9 @@
 /**
  * Router - routing urls to closurs and controllers - modified from https://github.com/NoahBuscher/Macaw
  *
- * @author David Carr - dave@daveismyname.com
- * @version 2.2
- * @date Auguest 16th, 2014
- * @date updated Sept 19, 2015
+ * @author Tony Le - tonyle.microsoft@gmail.com
+ * @version 1.0
+ * @date November 28, 2015
  */
 
 namespace Core;

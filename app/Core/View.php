@@ -2,10 +2,9 @@
 /**
  * View - load template pages
  *
- * @author David Carr - dave@daveismyname.com
- * @version 2.2
- * @date June 27, 2014
- * @date updated Sept 19, 2015
+ * @author Tony Le - tonyle.microsoft@gmail.com
+ * @version 1.0
+ * @date November 28, 2015
  */
 
 namespace Core;
@@ -30,7 +29,7 @@ class View
     public static function render($path, $data = false, $error = false)
     {
         self::sendHeaders();
-        
+
         require SMVC."app/views/$path.php";
     }
 
@@ -44,7 +43,7 @@ class View
     public static function renderModule($path, $data = false, $error = false)
     {
         self::sendHeaders();
-        
+
         require SMVC."app/Modules/$path.php";
     }
 
@@ -81,7 +80,7 @@ class View
     {
         self::$headers = array_merge(self::$headers, $headers);
     }
-    
+
     /**
      * Send headers
      */

@@ -2,10 +2,9 @@
 /**
  * Date Helper
  *
- * @author David Carr - dave@daveismyname.com
+ * @author Tony Le - tonyle.microsoft@gmail.com
  * @version 1.0
- * @date May 18 2015
- * @date updated Sept 19, 2015
+ * @date November 28, 2015
  */
 
 namespace Helpers;
@@ -101,7 +100,7 @@ class Date
         }
         return $dates;
     }
-    
+
     /**
      * Takes a month/year as input and returns the number of days
      * for the given month/year. Takes leap years into consideration.

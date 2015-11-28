@@ -2,9 +2,9 @@
 /**
  * Routes - all standard routes are defined here.
  *
- * @author David Carr - dave@daveismyname.com
- * @version 2.2
- * @date updated Sept 19, 2015
+ * @author Tony Le - tonyle.microsoft@gmail.com
+ * @version 1.0
+ * @date November 28, 2015
  */
 
 /** Create alias for Router. */
